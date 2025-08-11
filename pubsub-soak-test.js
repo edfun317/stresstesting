@@ -18,7 +18,7 @@ const currentRPS = new Rate('pubsub_current_rps');
 const DISABLE_THRESHOLDS = __ENV.DISABLE_THRESHOLDS === 'true';
 
 // Configuration parameters via environment variables
-const PROJECT_ID = __ENV.PROJECT_ID;
+const PROJECT_ID = __ENV.PROJECT_ID || 'gcp-20240131-013';
 const TOPIC_NAME = __ENV.TOPIC_NAME || 'topic_external_sys_push_member_list';
 const TARGET_RPS = parseInt(__ENV.TARGET_RPS) || 15000;
 const BATCH_SIZE = parseInt(__ENV.BATCH_SIZE) || 10;
